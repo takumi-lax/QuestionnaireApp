@@ -76,7 +76,6 @@ const Home = props => {
   const handleStartButtonClick = () => {
     if (numberOfImagesAnsweredToday === 0) {
       startPreQuestionnaire();
-      setNumberOfImagesAnsweredToday(1);
     } else {
       startQuestionnaire();
     }
@@ -96,7 +95,7 @@ const Home = props => {
         variant="outlined"
         color="primary"
         className={classes.button}
-        onClick={handleStartButtonClick}
+        onClick={startPreQuestionnaire}
         disabled={!isButtonAnabled}
       >
         回答をはじめる
